@@ -1,15 +1,16 @@
-class BlogsController < ApplicationController
+class Api::V1::BlogsController < ApplicationController
     def index 
-        blogs = Blogs.all 
-        render json: blogs 
+        blogs = Blog.all 
+        render json: blogs
     end
 
     def show 
-        blog = Blog.find_by(:id params[:id])
+        # blog = Blog.find_by(id: params[:id])
         if blog
             render json: blog 
         else
             render json: { message: 'This Blog does not exist' }
+        end
     end
 
     def create 
@@ -18,6 +19,7 @@ class BlogsController < ApplicationController
             render json: blog 
         else
             render json: {error: 'failed to create blog'} 
+        end
     end
 
     def update
@@ -47,4 +49,5 @@ class BlogsController < ApplicationController
     def blog_params
         params.require(:blog).permit(:img_url, :description)
     end
+
 end

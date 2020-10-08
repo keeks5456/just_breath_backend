@@ -1,7 +1,7 @@
-class JournalEntriesController < ApplicationController
+class Api::V1::JournalEntriesController < ApplicationController
 
     def index
-        journal_entries = Journal_entry.all 
+        journal_entries = JournalEntry.all 
         render json: journal_entries
     end
 
@@ -16,6 +16,7 @@ class JournalEntriesController < ApplicationController
             render json: journal_entry 
         else
             render json: {error: 'failed to create blog'} 
+        end
     end
 
     def update
