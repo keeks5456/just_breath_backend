@@ -5,24 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 Exercise.destroy_all
 Blog.destroy_all
 JournalEntry.destroy_all
 User.destroy_all
 
- user1 = User.create({
+
+5.times do 
+User.create({
     username: Faker::TvShows::RickAndMorty.character,
     bio: Faker::TvShows::RickAndMorty.quote,
     avatar: "https://prodimage.images-bn.com/pimages/0889698301824_p0_v1_s550x406.jpg",
     password: 'bacon',
     password_confirmation: 'bacon'
 })
+end
 
 5.times do
     JournalEntry.create({
         content: Faker::Quote.most_interesting_man_in_the_world,
-        user: user1
+        user_id: User.all.sample
     })
 end
 
@@ -34,7 +36,10 @@ end
 
     Blog.create(img_url: "https://www.discoveryinaction.com.au/wp-content/uploads/2015/08/how-to-improve-confidence.jpg", description:"")
 
-    Exercise.create(img_url: "", description:"https://youtu.be/ybl3Cou9pTc")
+    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
+    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
+    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
+    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
 
 puts 'seeds done'
 
