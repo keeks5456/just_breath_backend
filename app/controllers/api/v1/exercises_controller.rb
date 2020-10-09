@@ -6,7 +6,17 @@ class Api::V1::ExercisesController < ApplicationController
     end
 
     def show 
-        exercise = Exercise.find_by(id: params[:id])
+        exercise = find_exercise
         render json: exercise
+    end
+
+    private
+
+    def find_exercise
+        Exercise.find_by(id: params[:id])
+    end
+
+    def exercise_params
+        params.require(:exercise).permit(:img_url, :description)
     end
 end

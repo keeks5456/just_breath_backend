@@ -6,6 +6,7 @@ class Api::V1::BlogsController < ApplicationController
 
     def show 
         # blog = Blog.find_by(id: params[:id])
+        blog = find_blog
         if blog
             render json: blog 
         else
@@ -24,7 +25,7 @@ class Api::V1::BlogsController < ApplicationController
 
     def update
         # blog = Blog.find_by(id: params[:id])
-        find_blog
+        blog = find_blog
         if blog.update(blog_params)
           render json: blog
         else
@@ -34,16 +35,15 @@ class Api::V1::BlogsController < ApplicationController
 
       def destroy
         # blog = Blog.find_by(id: params[:id])
-        find_blog
+        blog = find_blog
         user.destroy
-    
         render json: { message: 'deleted' }
       end
 
     private
 
     def find_blog
-        blog = Blog.find_by(id: params[:id])
+        Blog.find_by(id: params[:id])
     end
 
     def blog_params

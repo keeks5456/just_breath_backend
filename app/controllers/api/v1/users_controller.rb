@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 
-    skip_before_action :authorized, only: [:create]
+    # skip_before_action :authorized, only: [:create]
 
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -17,10 +17,9 @@ class Api::V1::UsersController < ApplicationController
     end
 
  
-
     private 
 
     def user_params
-        params.require(:user).permit(:username, :bio, :avatar, :passwrd, :password_confirmation)
+        params.require(:user).permit(:username, :bio, :avatar, :password, :password_confirmation)
     end
 end

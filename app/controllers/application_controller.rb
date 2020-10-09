@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
-    before_action :authorized
+    # before_action :authorized
 
     def encode_token(payload) 
         JWT.encode(payload, 'bacon') #change later
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::API
         JWT.decode(token, 'bacon', true, algorithm: 'HS256')
         # JWT.decode => [{ "beef"=>"steak" }, { "alg"=>"HS256" }]
         rescue JWT::DecodeError
-            nil
+            [{error: 'Invalid token'}]
         end
     end
 end
