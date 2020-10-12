@@ -21,6 +21,8 @@ User.create({
 })
 end
 
+User.create(username: 'akiko', password:'bacon', password_confirmation: 'bacon', avatar: "pic here", )
+
 5.times do
     JournalEntry.create({
         content: Faker::Quote.most_interesting_man_in_the_world,

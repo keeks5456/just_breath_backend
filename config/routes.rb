@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :blogs
     resources :exercises
     resources :journal_entries
-    resource :users, only: [:create]
+    resource :users
 
     # get "/login", to: "auth#login"
     post "/login", to: "auth#create"
