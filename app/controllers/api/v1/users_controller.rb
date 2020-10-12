@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
 
-    # skip_before_action :authorized, only: [:create]
+    # skip_before_action :authorized, only: [:create, :delete]
+    # skip_before_action :authorized, only: %i[show index]
 
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -15,6 +16,38 @@ class Api::V1::UsersController < ApplicationController
             render json: {error: 'failed to create user'}, status: :not_acceptable
         end
     end
+
+    def index
+        users = User.all
+        render json: users
+      end
+    
+      def show
+        user = User.find_by(params[:id])
+        if user
+          render json: user
+        else
+          render json: { message: 'This ID does not exist' }
+        end
+      end
+
+      def update
+        user = User.find_by(params[:id])
+    
+        if user.update(user_params)
+          render json: user
+        else
+          render json: { error: 'Something went wrong' }
+        end
+      end
+    
+      def destroy
+        user = User.find_by(params[:id])
+        user.destroy
+    
+        render json: { message: 'deleted' }
+      end
+    
 
  
     private 

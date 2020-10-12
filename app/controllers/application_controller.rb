@@ -17,6 +17,7 @@ class ApplicationController < ActionController::API
         # headers: { 'Authorization': 'Bearer <token>' }
         begin
         JWT.decode(token, 'bacon', true, algorithm: 'HS256')
+        # JWT.decode(self.token, ENV['SECRET'], true, { alg: ENV['ALG'] }) //try this tomorrow friday
         # JWT.decode => [{ "beef"=>"steak" }, { "alg"=>"HS256" }]
         rescue JWT::DecodeError
             [{error: 'Invalid token'}]
