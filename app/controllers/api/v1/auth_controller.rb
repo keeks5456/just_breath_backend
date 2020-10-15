@@ -1,8 +1,8 @@
 class Api::V1::AuthController < ApplicationController
-    # skip_before_action :authorized, only: [:create]
-
+    skip_before_action :authorized, only: [:create]
+    
     def create 
-        user = User.find_by(username: params[:username]) #User#authenticate comes from BCrypt
+        user = User.find_by(username: params[:username]) 
         # byebug
         if user && user.authenticate(params[:password])   
             # encode token comes from ApplicationController
@@ -13,12 +13,22 @@ class Api::V1::AuthController < ApplicationController
         end
     end
 
-    def persist
-        token = encode_token({user_id: @user.id})
-        render json: {user:UserSerializer.new(@user), token:token} 
+    # def persist
+    #     # byebug
+    #     token = encode_token({user_id: user.id})
+    #     render json: {user:UserSerializer.new(user), token:token} 
+    # end
+
+    def currentUser 
+        # byebug
+        if !!current_user
+            token = encode_token({user_id: current_user.id})
+            render json: {user:  UserSerializer.new(current_user), token: token}
+        else
+            render json: {message: 'Invalid username or password'}, status: :unauthorized
+        end
     end
 
-    # params == "auth"=>{"username"=>"Rick Sanchez", "password"=>"bacon"}}
     private
     
     def user_login_params

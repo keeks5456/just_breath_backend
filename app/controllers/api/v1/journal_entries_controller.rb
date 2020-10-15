@@ -11,11 +11,12 @@ class Api::V1::JournalEntriesController < ApplicationController
     end
 
     def create 
-        journal_entry = Journal_entry.create(journal_entry_params)
+        journal_entry =  JournalEntry.create(journal_entry_params)
+        # byebug
         if journal_entry.valid?
             render json: journal_entry 
         else
-            render json: {error: 'failed to create blog'} 
+            render json: {error: 'failed to create journal entry'} 
         end
     end
 
@@ -44,6 +45,6 @@ class Api::V1::JournalEntriesController < ApplicationController
     end
 
     def journal_entry_params
-        params.require(:journal_entry).permit(:content)
+        params.require(:journal_entry).permit(:content, :user_id)
     end
 end
