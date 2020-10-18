@@ -42,9 +42,8 @@ end
     
     Blog.create(title: 'When Worry Gets Out of Control', img_url: "https://www.therecoveryvillage.com/wp-content/uploads/2019/02/what-is-generalized-anxiety.png", description:"Occasional anxiety is a normal part of life. You might worry about things like health, money, or family problems. But people with generalized anxiety disorder (GAD) feel extremely worried or feel nervous about these and other things—even when there is little or no reason to worry about them. People with GAD find it difficult to control their anxiety and stay focused on daily tasks.", name: 'image of the symptoms of Generalized Anxiety')
     
-    Blog.create(title: 'Obsessive-Compulsive Disorder
-        ', img_url: "https://www.straitstimes.com/sites/default/files/articles/2017/02/07/st_20170207_stbichongfebnew_2923554-page-001.jpg", description:"Obsessive-Compulsive Disorder (OCD) is a common, chronic, and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and/or behaviors (compulsions) that he or she feels the urge to repeat over and over.", name: 'man compulsive washing his hands')
-        # https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd/index.shtml#part_145346
+    Blog.create(title: 'Obsessive-Compulsive Disorder', img_url: "https://www.straitstimes.com/sites/default/files/articles/2017/02/07/st_20170207_stbichongfebnew_2923554-page-001.jpg", description:"Obsessive-Compulsive Disorder (OCD) is a common, chronic, and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and/or behaviors (compulsions) that he or she feels the urge to repeat over and over.", name: 'man compulsive washing his hands')
+         # https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd/index.shtml#part_145346
 
     Blog.create(title: 'Social Anxiety', img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpLB8V2jnmpM4ocJ-9cyxCzk764swT0G7Riw&usqp=CAU", description:"1. An understanding and awareness of the problem, 2. A commitment to carry through with cognitive-behavioral therapy even when it is repetitious and seems difficult... ", name: 'woman in a ghost like for around people in non ghost like form')
         # https://socialanxietyinstitute.org/what-is-social-anxiety

@@ -1,5 +1,8 @@
 class Api::V1::ExercisesController < ApplicationController
 
+    skip_before_action :authorized, only: [:create, :delete]
+    skip_before_action :authorized, only: %i[show index]
+
     def index 
         exercises = Exercise.all 
         render json: exercises
