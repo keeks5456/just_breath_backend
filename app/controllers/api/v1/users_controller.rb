@@ -19,7 +19,6 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def index
-      # byebug
         users = User.all
         render json: users
       end

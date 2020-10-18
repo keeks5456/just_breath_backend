@@ -13,14 +13,7 @@ class Api::V1::AuthController < ApplicationController
         end
     end
 
-    # def persist
-    #     # byebug
-    #     token = encode_token({user_id: user.id})
-    #     render json: {user:UserSerializer.new(user), token:token} 
-    # end
-
     def currentUser 
-        # byebug
         if !!current_user
             token = encode_token({user_id: current_user.id})
             render json: {user:  UserSerializer.new(current_user), token: token}
