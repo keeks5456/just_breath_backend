@@ -1,4 +1,8 @@
 class Api::V1::BlogsController < ApplicationController
+
+    skip_before_action :authorized, only: [:create, :delete]
+    skip_before_action :authorized, only: %i[show index]
+    
     def index 
         blogs = Blog.all 
         render json: blogs

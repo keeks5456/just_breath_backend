@@ -1,4 +1,6 @@
 class Api::V1::JournalEntriesController < ApplicationController
+  skip_before_action :authorized, only: [:create, :delete]
+  skip_before_action :authorized, only: %i[show index]
 
     def index
         journal_entries = JournalEntry.all 
@@ -6,11 +8,11 @@ class Api::V1::JournalEntriesController < ApplicationController
     end
 
     def show 
-        # journal_entry = Journal_entry.
 
     end
 
     def create 
+      # byebug
         journal_entry =  JournalEntry.create(journal_entry_params)
         # byebug
         if journal_entry.valid?
@@ -21,7 +23,6 @@ class Api::V1::JournalEntriesController < ApplicationController
     end
 
     def update
-        # blog = Blog.find_by(id: params[:id])
         find_journal_entry
         if journal_entry.update(journal_entry_params)
           render json: journal_entry
@@ -31,7 +32,6 @@ class Api::V1::JournalEntriesController < ApplicationController
       end
 
       def destroy
-        # journal_entry = journal_entry.find_by(id: params[:id])
         find_journal_entry
         user.destroy
     

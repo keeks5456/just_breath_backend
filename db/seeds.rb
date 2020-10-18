@@ -21,7 +21,7 @@ User.create({
 })
 end
 
-User.create(username: 'akiko', password:'bacon', password_confirmation: 'bacon', avatar: "pic here", )
+User.create(username: 'akiko', bio: "Confidence literally starts from yourself. You have to go look in the mirror at yourself. If you don’t like what you see, you’re going to give off that energy. – Megan Thee Stallion",password:'bacon', password_confirmation: 'bacon', avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvPq656mchx0pl_hXonWktZeumThtHCsQmdA&usqp=CAU", )
 
 5.times do
     JournalEntry.create({
@@ -30,13 +30,25 @@ User.create(username: 'akiko', password:'bacon', password_confirmation: 'bacon',
     })
 end
 
-    Blog.create(img_url: "https://images.squarespace-cdn.com/content/v1/5a8ec7a44c0dbfc5c297f8d1/1558453055924-N88Z2BWEN3THSX03GH5Y/ke17ZwdGBToddI8pDm48kG4VqDreF-qTqyP-RyQBlzwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcz9FKOkYZZtCaZTQFz_pq4njr3fQnFjhxZuT9qSS4BtKI42iWDYN3Yj3ILGKtJgbC/Add+a+heading+%281%29.png", description:"Impostor syndrome—the idea that you’ve only succeeded due to luck, and not because of your talent or qualifications—was first identified in 1978 by psychologists Pauline Rose Clance and Suzanne Imes. In their paper, they theorized that women were uniquely affected by impostor syndrome.")
+    Blog.create(title: 'Imposter Syndrome', img_url: "https://images.squarespace-cdn.com/content/v1/5a8ec7a44c0dbfc5c297f8d1/1558453055924-N88Z2BWEN3THSX03GH5Y/ke17ZwdGBToddI8pDm48kG4VqDreF-qTqyP-RyQBlzwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcz9FKOkYZZtCaZTQFz_pq4njr3fQnFjhxZuT9qSS4BtKI42iWDYN3Yj3ILGKtJgbC/Add+a+heading+%281%29.png", description:"Impostor syndrome—the idea that you’ve only succeeded due to luck, and not because of your talent or qualifications—was first identified in 1978 by psychologists Pauline Rose Clance and Suzanne Imes. In their paper, they theorized that women were uniquely affected by impostor syndrome.")
 
-    Blog.create(img_url: "", description:"There are different ways that you may be able to approach an anxiety cycle and break it for better emotional wellness.")
+    Blog.create(title: 'Break the Vicious Cycle', img_url: "", description:"There are different ways that you may be able to approach an anxiety cycle and break it for better emotional wellness.")
 
-    Blog.create(img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqo-EJ44yRdteEfURRjuoBFg-lgXPLCsAZrA&usqp=CAU", description:"Do you get anxious about the very idea of a job interview? Do you worry your nerves will get in the way of impressing your interviewer?")
+    Blog.create(title: 'Conqure The Fear Of Interviews', img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqo-EJ44yRdteEfURRjuoBFg-lgXPLCsAZrA&usqp=CAU", description:"Do you get anxious about the very idea of a job interview? Do you worry your nerves will get in the way of impressing your interviewer?")
 
-    Blog.create(img_url: "https://www.discoveryinaction.com.au/wp-content/uploads/2015/08/how-to-improve-confidence.jpg", description:"")
+    Blog.create(title: 'When Imposter Syndrome Hits You', img_url: "https://www.discoveryinaction.com.au/wp-content/uploads/2015/08/how-to-improve-confidence.jpg", description:"You’ll suddenly feel like a fraud, an imposter, and you think you’re undeserving of the success you’ve had so far. It sucks, it really really sucks... ")
+
+    Blog.create(title: 'How Writing Can Help with Anxiety', img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbd1gsP1dLVMoNS17t_lMDygVJ0ml3A9RTpg&usqp=CAU", description:"Flow is what you can achieve when you fully immerse yourself into what you’re doing. It’s a mental state that’s characterized by total concentration. It’s also referred to as “getting into the zone,” which is what most people know it as.")
+    
+    Blog.create(title: 'When Worry Gets Out of Control', img_url: "https://www.therecoveryvillage.com/wp-content/uploads/2019/02/what-is-generalized-anxiety.png", description:"Occasional anxiety is a normal part of life. You might worry about things like health, money, or family problems. But people with generalized anxiety disorder (GAD) feel extremely worried or feel nervous about these and other things—even when there is little or no reason to worry about them. People with GAD find it difficult to control their anxiety and stay focused on daily tasks.")
+    
+    Blog.create(title: 'Obsessive-Compulsive Disorder
+        ', img_url: "https://www.straitstimes.com/sites/default/files/articles/2017/02/07/st_20170207_stbichongfebnew_2923554-page-001.jpg", description:"Obsessive-Compulsive Disorder (OCD) is a common, chronic, and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and/or behaviors (compulsions) that he or she feels the urge to repeat over and over.")
+        # https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd/index.shtml#part_145346
+
+    Blog.create(title: 'Social Anxiety', img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpLB8V2jnmpM4ocJ-9cyxCzk764swT0G7Riw&usqp=CAU", description:"1. An understanding and awareness of the problem, 2. A commitment to carry through with cognitive-behavioral therapy even when it is repetitious and seems difficult... ")
+        # https://socialanxietyinstitute.org/what-is-social-anxiety
+
 
     Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
     Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
