@@ -23,12 +23,12 @@ end
 
 User.create(username: 'akiko', bio: "Confidence literally starts from yourself. You have to go look in the mirror at yourself. If you don’t like what you see, you’re going to give off that energy. – Megan Thee Stallion",password:'bacon', password_confirmation: 'bacon', avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvPq656mchx0pl_hXonWktZeumThtHCsQmdA&usqp=CAU", )
 
-5.times do
-    JournalEntry.create({
-        content: Faker::Quote.most_interesting_man_in_the_world,
-        user_id: User.all.sample
-    })
-end
+# 5.times do
+#     JournalEntry.create({
+#         content: Faker::Quote.most_interesting_man_in_the_world,
+#         user_id: User.all.sample
+#     })
+# end
 
     Blog.create(title: 'Imposter Syndrome', img_url: "https://images.squarespace-cdn.com/content/v1/5a8ec7a44c0dbfc5c297f8d1/1558453055924-N88Z2BWEN3THSX03GH5Y/ke17ZwdGBToddI8pDm48kG4VqDreF-qTqyP-RyQBlzwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcz9FKOkYZZtCaZTQFz_pq4njr3fQnFjhxZuT9qSS4BtKI42iWDYN3Yj3ILGKtJgbC/Add+a+heading+%281%29.png", description:"Impostor syndrome—the idea that you’ve only succeeded due to luck, and not because of your talent or qualifications—was first identified in 1978 by psychologists Pauline Rose Clance and Suzanne Imes. In their paper, they theorized that women were uniquely affected by impostor syndrome.", name:'Imposter Syndrome vs reality')
 
@@ -59,7 +59,14 @@ end
     Exercise.create(title:'Yoga For Anxiety and Stress',img_url: "https://youtu.be/hJbRpHZr_d0", description:"In this practice video Adriene guides you through breath and body practices that serve you when you feel bad")
 
     Exercise.create(title:'15 Minute Calming Yoga',img_url: "https://youtu.be/Nw2oBIrQGLo", description:"Use this 15 minute calming yoga for stress relief and anxiety to calm your mind and relax your body with long, relaxing yoga stretches. ")
-    
+
+    8.times do 
+    UserFavoriteBlog.create({
+        favorite: false,
+        user_id: User.all.sample,
+        blog_id: Blog.all.sample
+    })
+    end
     # add more here later
     # Exercise.create(title:'All You Need Is 5 Minutes',img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
     # Exercise.create(title:'Kicking Imposter Syndrome WHere It Hurts',img_url: "https://youtu.be/whyUPLJZljE", description:"Solution to Imposter syndrome with Lou Solomon")
