@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :exercises
     resources :journal_entries
     resources :users
+    resources :user_favorite_exercises
+    resources :user_favorite_blogs
 
     post "/login", to: "auth#create"
     get '/profile', to: 'users#profile'

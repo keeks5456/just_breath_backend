@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_163601) do
     t.bigint "blog_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "favorite"
+    t.boolean "favorite", default: false
     t.index ["blog_id"], name: "index_user_favorite_blogs_on_blog_id"
     t.index ["user_id"], name: "index_user_favorite_blogs_on_user_id"
   end
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_163601) do
     t.bigint "exercise_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "favorite"
+    t.boolean "favorite", default: false
     t.index ["exercise_id"], name: "index_user_favorite_exercises_on_exercise_id"
     t.index ["user_id"], name: "index_user_favorite_exercises_on_user_id"
   end
