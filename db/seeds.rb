@@ -48,11 +48,21 @@ end
     Blog.create(title: 'Social Anxiety', img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpLB8V2jnmpM4ocJ-9cyxCzk764swT0G7Riw&usqp=CAU", description:"1. An understanding and awareness of the problem, 2. A commitment to carry through with cognitive-behavioral therapy even when it is repetitious and seems difficult... ", name: 'woman in a ghost like for around people in non ghost like form')
         # https://socialanxietyinstitute.org/what-is-social-anxiety
 
+        # mediation
+    Exercise.create(title:'All You Need Is 5 Minutes',img_url: "https://youtu.be/hFcQpNr_KA4", description:"5 Minutes A Day with Stacey Schuerma")
+    Exercise.create(title:'10 Minutes Of Mediation',img_url: "https://youtu.be/O-6f5wQXSu8", description:"Take a moment and let this guided meditation relieve your anxiety.")
+    Exercise.create(title:'Meditation for Anxiety ',img_url: "https://youtu.be/4pLUleLdwY4", description:"15 Minute Meditation For Anxiety guides you through a simple at home meditation to provide relief from anxiety, stress, and energetic imbalance. ")
 
-    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
-    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
-    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
-    Exercise.create(img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
+    # work anxiety
+    Exercise.create(title:'Japanese Method To Relax In 5 Minutes',img_url: "https://youtu.be/m3-O7gPsQK0", description:"Helpful technique to help relieve stress and anxiety")
+    
+    Exercise.create(title:'Yoga For Anxiety and Stress',img_url: "https://youtu.be/hJbRpHZr_d0", description:"In this practice video Adriene guides you through breath and body practices that serve you when you feel bad")
+
+    Exercise.create(title:'15 Minute Calming Yoga',img_url: "https://youtu.be/Nw2oBIrQGLo", description:"Use this 15 minute calming yoga for stress relief and anxiety to calm your mind and relax your body with long, relaxing yoga stretches. ")
+    
+    # add more here later
+    # Exercise.create(title:'All You Need Is 5 Minutes',img_url: "https://youtu.be/UkM-FjfN6Mc", description:"")
+    # Exercise.create(title:'Kicking Imposter Syndrome WHere It Hurts',img_url: "https://youtu.be/whyUPLJZljE", description:"Solution to Imposter syndrome with Lou Solomon")
 
 puts 'seeds done'
 

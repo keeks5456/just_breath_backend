@@ -51,7 +51,7 @@ class Api::V1::BlogsController < ApplicationController
     end
 
     def blog_params
-        params.require(:blog).permit(:img_url, :description)
+        params.require(:blog).permit(:img_url, :description, :title, :name)
     end
 
 end
