@@ -20,6 +20,6 @@ class Api::V1::ExercisesController < ApplicationController
     end
 
     def exercise_params
-        params.require(:exercise).permit(:img_url, :description)
+        params.require(:exercise).permit(:img_url, :description, :title)
     end
 end
