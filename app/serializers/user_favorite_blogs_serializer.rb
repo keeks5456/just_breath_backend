@@ -1,5 +1,5 @@
 class UserFavoriteBlogsSerializer < ActiveModel::Serializer
-  attributes :id, :favorites
+  attributes :id, 
 
   belongs_to :user
   belongs_to :blog

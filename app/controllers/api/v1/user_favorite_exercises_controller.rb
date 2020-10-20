@@ -33,6 +33,6 @@ class Api::V1::UserFavoriteExercisesController < ApplicationController
     end
 
     def user_favorite_exercises_params
-        params.require(:user_favorite_exercises).permit(:favorite, :user_id, :exercise_id)
+        params.require(:user_favorite_exercises).permit( :user_id, :exercise_id)
     end
 end
