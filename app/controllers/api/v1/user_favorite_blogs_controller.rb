@@ -8,6 +8,17 @@ class Api::V1::UserFavoriteBlogsController < ApplicationController
         render json: user_favorite_blogs
     end
 
+    def create 
+        # byebug
+        user_favorite_blogs = UserFavoriteBlog.create(user_favorite_blogs_params)
+        # maybe this will be a find or create by
+        if user_favorite_blogs.valid?
+            render json: user_favorite_blogs 
+        else
+            render json: {error: 'failed to create blog'} 
+        end
+    end
+
     def update
         user_favorite_blogs = user_favorite_blogs
         if user_favorite_blogs.update(user_favorite_blogs_params)
@@ -24,6 +35,6 @@ class Api::V1::UserFavoriteBlogsController < ApplicationController
     end
 
     def user_favorite_blogs_params 
-        params.require(:user_favorite_blogs).permit(:favorite, :user_id, :blog_id, )
+        params.require(:user_favorite_blog).permit( :user_id, :blog_id)
     end
 end
