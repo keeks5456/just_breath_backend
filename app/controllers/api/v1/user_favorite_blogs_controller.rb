@@ -11,7 +11,7 @@ class Api::V1::UserFavoriteBlogsController < ApplicationController
     def create 
         # byebug
         user_favorite_blogs = UserFavoriteBlog.create(user_favorite_blogs_params)
-        # maybe this will be a find or create by
+ 
         if user_favorite_blogs.valid?
             render json: user_favorite_blogs 
         else
