@@ -62,7 +62,6 @@ User.create(username: 'akiko', bio: "Confidence literally starts from yourself. 
 
     8.times do 
     UserFavoriteBlog.create({
-        favorite: false,
         user_id: User.all.sample,
         blog_id: Blog.all.sample
     })

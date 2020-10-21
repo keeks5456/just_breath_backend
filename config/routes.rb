@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     post "/login", to: "auth#create"
     get '/profile', to: 'users#profile'
     post '/currentUser', to: 'auth#currentUser'
-
+    post '/user_favorite_exercises/:user_id/:exercise_id', to: 'user_favorite_exercises#create'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   end
