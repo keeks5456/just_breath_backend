@@ -18,15 +18,6 @@ class Api::V1::UserFavoriteExercisesController < ApplicationController
         end
     end
 
-    # def update
-    #     user_favorite_exercises = user_favorite_exercises_params
-    #     if user_favorite_exercises.update(find_user_favorites_exercises)
-    #       render json: user_favorite_exercises
-    #     else
-    #       render json: { error: 'Something went wrong' }
-    #     end
-    #   end
-
       private
 
     def find_user_favorite_exercises
