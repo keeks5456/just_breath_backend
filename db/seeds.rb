@@ -38,12 +38,15 @@ end
     Blog.create(title: 'Obsessive-Compulsive Disorder', img_url: "https://www.straitstimes.com/sites/default/files/articles/2017/02/07/st_20170207_stbichongfebnew_2923554-page-001.jpg", description:"Obsessive-Compulsive Disorder (OCD) is a common, chronic, and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and/or behaviors (compulsions) that he or she feels the urge to repeat over and over.", name: 'man compulsive washing his hands')
 
     Blog.create(title: '9 Ways To Deal With Imposter Syndrome', img_url: "https://blog.hubspot.com/hubfs/how-to-deal-with-imposter-syndrome.jpg", description:"People who suffer from this syndrome often feel like frauds -- despite being smart, skilled, capable professionals who actually deserve whatever commendations and praise they're given.", name: "man with a mask")
-
-    Blog.create(title: '9 Ways To Deal With Imposter Syndrome', img_url: "https://blog.hubspot.com/hubfs/how-to-deal-with-imposter-syndrome.jpg", description:"People who suffer from this syndrome often feel like frauds -- despite being smart, skilled, capable professionals who actually deserve whatever commendations and praise they're given.") #https://www.verywellmind.com/social-anxiety-disorder-tips-3024209
+ #https://www.verywellmind.com/social-anxiety-disorder-tips-3024209
 
     Blog.create(title: 'Manage Social Anxiety with Activities', img_url: "https://www.verywellmind.com/thmb/SweG42-uxMalczHOBzpLxOSaNgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/social-anxiety-disorder-tips-30242092-51f10c97492743d284f8c06cd3fb1c39.png", description:"Self-help strategies often draw on the effective components of more traditional treatment approaches. For example, self-help might incorporate aspects of relaxation, thought reprogramming, and exposure to feared situations.", name: 'a park setting with people exercising different ways f managing stress.')
         # https://socialanxietyinstitute.org/what-is-social-anxiety
 
+
+
+    Blog.create(title: 'Combate The Vicious Cycle Of OCD', img_url: "https://www.helpguide.org/wp-content/uploads/2019/01/ocd-cycle-400.jpg", description:"Conversely, by repeatedly exposing yourself to your OCD triggers, you can learn to resist the urge to complete your compulsive rituals. This is known as exposure and response prevention (ERP) and is a mainstay of professional therapy for OCD.") 
+    # https://www.helpguide.org/articles/anxiety/obssessive-compulsive-disorder-ocd.htm
         ################################## 
         # Exercises data
 
